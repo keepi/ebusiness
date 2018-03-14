@@ -1,0 +1,44 @@
+input[type=text],
+input[type=password],
+input[type=button] {
+  width: 100%;
+  height: 28px;
+}
+.form_group {
+  margin-bottom: 15px;
+}
+.login_wrap {
+  width: 307px;
+  border: 1px solid #e8e8e8;
+  margin: 10px auto;
+  padding: 42px 66px 10px 87px;
+}
+.other_choose {
+  margin-bottom: 28px;
+}
+.other_choose label {
+  margin-left: -13px;
+}
+.btn {
+  margin-bottom: 33px;
+}
+.btn .submit {
+  height: 36px;
+}
+.partner a {
+  color: #666666;
+}
+.website {
+  color: #999;
+  margin-bottom: 8px;
+}
+.to_register a {
+  display: inline-block;
+  height: 31px;
+  line-height: 31px;
+  padding: 0 22px;
+  color: #fff;
+  background: #7cbe56;
+  border-radius: 2px;
+  margin-left: 560px;
+}

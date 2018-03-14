@@ -1,0 +1,73 @@
+@import "init";
+
+/*主体部分*/
+
+/****侧边栏****/
+.aside_class{
+  border:1px solid #d7d7d7;
+  background:#f3f3f3;
+  .nav_hd{
+    font:14px "SimHei" ;
+    font-weight: bolder;
+    line-height: 30px;
+  }
+}
+
+/*****商品主列表*****/
+.article{
+  width: 808px;
+  min-height: 700px;
+  .lg_banner{
+    margin-left: 0;
+  }
+  .product_detail_item{
+    margin-top: 16px;
+    overflow: hidden;
+  }
+  .product_detail_hd{
+    line-height: 24px;
+    font-weight: 400;
+    font-size: 16px;
+    border-bottom: 2px solid #ccc;
+    a{
+      display: inline-block;
+      width: 202px;
+      text-indent: 9px;
+      color: #333;
+      border-bottom: 2px solid #096dba;
+      margin-bottom: -2px;
+    }
+  }
+  .product_detail_main{
+    overflow: hidden;
+    margin-bottom: 20px;
+    li{
+      width: 25%;
+      margin:0 0 10px 0;
+      float: left;
+      font: @SimHei;
+      padding: 15px 0 0 0;
+    }
+    dd{
+      padding: 0 21px;
+    }
+    .info_text{
+      color: #333;
+      margin-bottom:20px ;
+    }
+    .info_price{
+      color: #d4105a;
+    }
+    .info_appraise{
+      color: #444;
+      a{
+        color: #37a;
+      }
+    }
+    .star{
+      position: relative;
+      top: 1px;
+      background: url("../../image/img/star5.png") 0 0 no-repeat;
+    }
+  }
+}

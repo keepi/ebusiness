@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>注册</title>
+  <link rel="stylesheet" href="css/include/reset.css"/>
+  <link rel="stylesheet" href="css/include/header.css"/>
+  <link rel="stylesheet" href="css/include/common.css"/>
+  <link rel="stylesheet" href="css/module/log_reg.css"/>
+  <link rel="stylesheet" href="css/include/register.css"/>
+  <link rel="stylesheet" href="css/include/footer.css"/>
+</head>
+<body>
+<!--header-->
+<header id="header">
+  <div class="header_search">
+    <div class="container">
+      <div class="logo lf">
+        <a href=""></a>
+      </div>
+      <span class="login_title">欢迎注册</span>
+    </div>
+  </div>
+</header>
+<!--main-->
+<div id="main">
+  <div class="container">
+    <div class="login_wrap clearFix">
+      <form id="form_list" >
+        <div class="form_group">
+          <label>账户名：</label>
+          <input name="uname" class="username_inp" type="text" placeholder="邮箱/手机号/用户名"/>
+        </div>
+        <span class="help_txt"></span>
+        <div class="form_group">
+          <label>请设置密码：</label><br/>
+          <input name="upwd" class="password_inp" type="password"/>
+        </div>
+        <span class="help_txt"></span>
+        <div class="form_group">
+          <label>请确认密码：</label><br/>
+          <input name="pwda" class="password_inp" type="password"/>
+        </div>
+        <span class="help_txt"></span>
+        <div class="form_group">
+          <label>邮箱：</label><br/>
+          <input name="uemail" class="mail_inp" type="text"/>
+        </div>
+        <span class="help_txt"></span>
+        <div class="form_group">
+          <label>地址：</label><br/>
+          <input name="uaddr" class="addr_inp" type="text"/>
+        </div>
+        <span class="help_txt"></span>
+        <div class="other_choose">
+          <input id="isAgree" value="0" name="isAgree" type="checkbox"/>
+          <label class="no_tip">我已阅读并同意</label>
+          <a href="javascript:;">《用户注册协议》</a>
+        </div>
+        <div class="btn"><input id="bt_register" type="button" class="submit" value="提交"/></div>
+    </form>
+    </div>
+  </div>
+</div>
+<!--footer-->
+<footer id="footer">
+  <div class="container">
+    <p>
+      <a href="">慕课简介 </a>|
+      <a href="">慕课公告 </a>|
+      <a href="">招纳贤士 </a>|
+      <a href="">联系我们 </a>|
+      <span>客服热线：400-675-1234</span>
+    </p>
+    <p>Copyright &copy; 2006 - 2014 慕课版权所有&nbsp;&nbsp;&nbsp;京ICP备09037834号&nbsp;&nbsp;&nbsp;京ICP证B1034-8373号&nbsp;&nbsp;&nbsp;某市公安局XX分局备案编号：123456789123 </p>
+    <p class="brand">
+      <img src="image/pic/foot_img.jpg" alt=""/>
+      <img src="image/pic/foot_img.jpg" alt=""/>
+      <img src="image/pic/foot_img.jpg" alt=""/>
+      <img src="image/pic/foot_img.jpg" alt=""/>
+    </p>
+  </div>
+</footer>
+<script src="js/jquery/jquery-1.11.3.js"></script>
+<script src="js/commom/commom.js"></script>
+<script src="js/commom/register.js"></script>
+<script src="js/ajax/register.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+/*reset*/
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font: 12px 'SimHei', Helvetica, Arial, sans-serif;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+i,
+em,
+strong {
+  font-style: normal;
+}
+img {
+  vertical-align: baseline;
+}
+textarea,
+input,
+button,
+select {
+  outline: none;
+  border: 0;
+}
+a {
+  text-decoration: none;
+  color: #666;
+}
+a:hover {
+  text-decoration: underline;
+}
+.lf {
+  float: left;
+}
+.rt {
+  float: right;
+}
+.clear {
+  clear: both;
+}
+.clearFix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+/***public***/
+#header,
+#main,
+#footer {
+  width: 100%;
+}
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+.icon {
+  display: inline-block;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+input[type=submit],
+input[type=button],
+button {
+  cursor: pointer;
+}

@@ -1,0 +1,138 @@
+@import "init";
+@import "reset";
+/**main**/
+.lg_banner{
+  margin-left: 189px;
+}
+/**商品详情列表**/
+.show_product{
+  margin-top:15px;
+  .product_hd{
+    padding-right: 23px;
+    padding-bottom: 15px;
+    h3{
+      position: relative;
+      font: 24px 'Microsoft YaHei';
+      height: 44px;
+      .class_name{
+        position: absolute;
+        left: 58px;
+        top:11px;
+      }
+      .icon{
+        margin-right: 14px;
+        width:44px ;
+        height: 55px;
+        background: url("../../image/img/icon_items.png") 0 0 no-repeat;
+      }
+      .more{
+        font: @SimHei;
+        color: #000;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+    }
+  }
+  .product_main{
+    height: 400px;
+    .sm_banner{
+      .lf;
+      width: 190px;
+      height: 400px;
+      .carousel{
+        height: 400px;
+        .carousel_slider{
+          width:380px;
+          img{height: 400px}
+        }
+      }
+    }
+    .product_list{
+      .lf;
+      width: 809px;
+      height: 396px;
+      margin-right: -4px;
+      border-top:1px solid #cccccc ;
+      border-bottom:3px solid #ff7201 ;
+      .clearFix;
+      .product_item_lg{
+        dl{
+          .lf;
+          padding-top: 44px;
+          padding-left: 14px;
+          padding-bottom: 20px;
+          width:187px;
+          height: 215px;
+          border-right:1px solid #ccc ;
+          border-bottom:1px solid #ccc ;
+        }
+        dt{
+          width: 100%;
+          height: 170px;
+          text-align: center;
+          a{
+            display: inline-block;
+            width: 155px;
+            height: 152px;
+          }
+          img{
+            width: 132px;
+            height: 100%;
+          }
+        }
+        dd{
+          text-align: center;
+          height: 40px;
+
+          .good_name{
+            line-height: 24px;
+            font:16px "Microsoft YaHei" ;
+          }
+          .price{
+            line-height: 24px;
+            font:14px "Microsoft YaHei" ;
+            color: #ff7300;
+          }
+        }
+      }
+      .product_item_sm{
+        .product_item_list{
+          width: 201px;
+          height: 98px;
+          padding-top: 18px;
+          border-right: 1px solid #ccc;
+          overflow: hidden;
+          position: relative;
+        }
+        .item_list{.lf;}
+        .show_pic{
+          display:table-cell;
+          text-align:center;
+          vertical-align:middle;
+          width: 106px;
+          line-height: 98px;
+          height:100%;
+        }
+        .info{
+          width: 95px;
+          height:100%;
+          margin-top: 14px;
+        }
+        .info_text{
+          font:@SimHei;
+        }
+        .info_price{
+          font: 16px "Microsoft YaHei";
+        }
+        .on{
+          .info_text{
+            a{
+              color: #ff7300;
+            }
+          }
+        }
+      }
+    }
+  }
+}

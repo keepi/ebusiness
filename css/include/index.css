@@ -1,0 +1,215 @@
+/*reset*/
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font: 12px 'SimHei', Helvetica, Arial, sans-serif;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+i,
+em,
+strong {
+  font-style: normal;
+}
+img {
+  vertical-align: baseline;
+}
+textarea,
+input,
+button,
+select {
+  outline: none;
+  border: 0;
+}
+a {
+  text-decoration: none;
+  color: #666;
+}
+a:hover {
+  text-decoration: underline;
+}
+.lf {
+  float: left;
+}
+.rt {
+  float: right;
+}
+.clear {
+  clear: both;
+}
+.clearFix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+/***public***/
+#header,
+#main,
+#footer {
+  width: 100%;
+}
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+.icon {
+  display: inline-block;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+input[type=submit],
+input[type=button],
+button {
+  cursor: pointer;
+}
+.item_class {
+  display: block;
+}
+/**main**/
+.lg_banner {
+  margin-left: 189px;
+}
+/**商品详情列表**/
+.show_product {
+  margin-top: 15px;
+}
+.show_product .product_hd {
+  padding-right: 23px;
+  padding-bottom: 15px;
+}
+.show_product .product_hd h3 {
+  position: relative;
+  font: 24px 'Microsoft YaHei';
+  height: 44px;
+}
+.show_product .product_hd h3 .class_name {
+  position: absolute;
+  left: 58px;
+  top: 11px;
+}
+.show_product .product_hd h3 .icon {
+  margin-right: 14px;
+  width: 44px ;
+  height: 55px;
+  background: url("../../image/img/icon_items.png") 0 0 no-repeat;
+}
+.show_product .product_hd h3 .more {
+  font: 12px 'SimHei';
+  color: #000;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.show_product .product_main {
+  height: 400px;
+}
+.show_product .product_main .sm_banner {
+  float: left;
+  width: 190px;
+  height: 400px;
+}
+.show_product .product_main .sm_banner .carousel {
+  height: 400px;
+}
+.show_product .product_main .sm_banner .carousel .carousel_slider {
+  width: 380px;
+}
+.show_product .product_main .sm_banner .carousel .carousel_slider img {
+  height: 400px;
+}
+.show_product .product_main .product_list {
+  float: left;
+  width: 809px;
+  height: 396px;
+  margin-right: -4px;
+  border-top: 1px solid #cccccc ;
+  border-bottom: 3px solid #ff7201 ;
+}
+.show_product .product_main .product_list:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.show_product .product_main .product_list .product_item_lg dl {
+  float: left;
+  padding-top: 44px;
+  padding-left: 14px;
+  padding-bottom: 20px;
+  width: 187px;
+  height: 215px;
+  border-right: 1px solid #ccc ;
+  border-bottom: 1px solid #ccc ;
+}
+.show_product .product_main .product_list .product_item_lg dt {
+  width: 100%;
+  height: 170px;
+  text-align: center;
+}
+.show_product .product_main .product_list .product_item_lg dt a {
+  display: inline-block;
+  width: 155px;
+  height: 152px;
+}
+.show_product .product_main .product_list .product_item_lg dt img {
+  width: 90%;
+}
+.show_product .product_main .product_list .product_item_lg dd {
+  text-align: center;
+  height: 40px;
+}
+.show_product .product_main .product_list .product_item_lg dd .good_name {
+  width: 187px;
+  height: 24px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  line-height: 24px;
+  font: 16px "Microsoft YaHei";
+}
+.show_product .product_main .product_list .product_item_lg dd .price {
+  line-height: 24px;
+  font: 14px "Microsoft YaHei";
+  color: #ff7300;
+}
+.show_product .product_main .product_list .product_item_sm .product_item_list {
+  width: 201px;
+  height: 98px;
+  padding-top: 18px;
+  border-right: 1px solid #ccc;
+  overflow: hidden;
+  position: relative;
+}
+.show_product .product_main .product_list .product_item_sm .item_list {
+  float: left;
+}
+.show_product .product_main .product_list .product_item_sm .show_pic {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  width: 106px;
+  line-height: 98px;
+  height: 100%;
+}
+.show_product .product_main .product_list .product_item_sm .info {
+  width: 95px;
+  height: 100%;
+  margin-top: 14px;
+}
+.show_product .product_main .product_list .product_item_sm .info_text {
+  font: 12px 'SimHei';
+}
+.show_product .product_main .product_list .product_item_sm .info_price {
+  font: 16px "Microsoft YaHei";
+}
+.show_product .product_main .product_list .product_item_sm .on .info_text a {
+  color: #ff7300;
+}

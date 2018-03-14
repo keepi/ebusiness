@@ -1,0 +1,32 @@
+.login_title {
+  font: 22px/70px 'Microsoft YaHei';
+  color: #fff;
+  margin-left: 24px;
+}
+.login_label,
+.register_label {
+  color: #999999;
+}
+.submit {
+  border-radius: 3px;
+  border: 0;
+  background: linear-gradient(bottom, #dddddd, #f8f8f8);
+  background: -webkit-linear-gradient(bottom, #dddddd, #f8f8f8);
+  color: #606060;
+}
+.username_inp,
+.password_inp,
+input {
+  border: 1px solid #ccc;
+  padding: 2px 3px;
+}
+.username_inp {
+  background: url("../../image/img/login_user.png") right 11px top 6px no-repeat;
+}
+.password_inp {
+  background: url("../../image/img/login_password.png") right 11px top 6px no-repeat;
+}
+input[type=checkbox] {
+  position: relative;
+  top: 2px;
+}

@@ -1,0 +1,48 @@
+input[type=text],
+input[type=password] {
+  width: 264px;
+  height: 28px;
+}
+label {
+  width: 87px;
+  text-align: right;
+}
+label,
+input {
+  float: left;
+}
+.form_group {
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+.form_group label {
+  line-height: 48px;
+  margin-right: 19px;
+}
+.login_wrap {
+  width: 378px;
+  border: 1px solid #e8e8e8;
+  margin: 10px auto;
+  padding: 66px 150px 55px 103px;
+}
+.other_choose {
+  margin: 55px 0 34px 100px;
+}
+.other_choose label {
+  margin-left: -7px;
+}
+.other_choose a {
+  color: #005aa0;
+}
+.btn {
+  margin-left: 95px;
+}
+.btn .submit {
+  height: 38px;
+  width: 270px;
+}
+.err,
+.succ,
+.help_txt {
+  text-align: center;
+}

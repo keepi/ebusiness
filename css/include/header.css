@@ -1,0 +1,247 @@
+/***header***/
+#header .header_bar {
+  height: 30px ;
+  line-height: 30px;
+  border-bottom: 1px solid #eeeeee;
+}
+#header .header_bar .collect i {
+  width: 12px;
+  height: 12px;
+  margin: 0 7px 0 0;
+  background: url("../../image/img/icon_nav.png") 0 0 no-repeat;
+}
+#header .header_bar .login {
+  margin-right: 21px;
+}
+#header .header_bar .login span {
+  color: #666;
+}
+#header .header_search {
+  height: 72px;
+  padding: 13px 0 0 39px;
+  background: #1d7ad9;
+}
+#header .header_search .logo a {
+  display: inline-block;
+  width: 112px ;
+  height: 59px ;
+  background: url("../../image/img/logo.png") 0 0 no-repeat;
+}
+#header .header_search .search {
+  margin-left: 185px;
+  margin-top: 10px;
+}
+#header .header_search .search .search_input {
+  width: 350px;
+  height: 35px;
+  padding: 0 5px;
+}
+#header .header_search .search .search_btn {
+  width: 69px;
+  height: 35px;
+  background: #ff8c00;
+  color: #fff;
+  font: 14px 'Microsoft YaHei';
+}
+#header .header_search .cart {
+  margin-right: 59px;
+  margin-top: 10px;
+}
+#header .header_search .cart a {
+  font: 14px 'Microsoft YaHei';
+  display: inline-block;
+  color: #fff;
+  background: #ff8800;
+  line-height: 35px;
+}
+#header .header_search .cart .cart_text {
+  height: 35px;
+  border-right: 1px solid #e27a00;
+}
+#header .header_search .cart .cart_text .icon {
+  width: 23px;
+  height: 20px;
+  background: url("../../image/img/icon_nav.png") -17px 0 no-repeat;
+  position: relative;
+  top: 4px;
+  left: 10px;
+}
+#header .header_search .cart .cart_text span {
+  margin-left: 10px;
+  padding-right: 5px;
+}
+#header .header_search .cart .cart_count {
+  width: 41px ;
+  height: 35px ;
+  border-left: #ff9c01;
+  padding-right: 15px;
+}
+#header .header_search .cart .cart_count .count {
+  padding-right: 6px ;
+}
+#header .header_search .cart .cart_count .icon {
+  width: 12px;
+  height: 12px;
+  background: url("../../image/img/icon_nav.png") -17px -23px no-repeat;
+  position: relative;
+  top: 11px;
+}
+#header .header_nav {
+  height: 35px;
+  background: #1369c0;
+}
+#header .header_nav a {
+  color: #fff;
+  font-family: 'Microsoft YaHei';
+}
+#header .header_nav .nav_products {
+  width: 189px;
+  text-align: center;
+  position: relative;
+  z-index: 100;
+}
+#header .header_nav h3 {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 35px;
+}
+#header .header_nav h3 a:after {
+  content: '';
+  display: inline-block;
+  width: 11px ;
+  height: 7px;
+  background: url("../../image/img/icon_nav.png") -1px -16px no-repeat;
+}
+#header .header_nav .item_class {
+  display: none;
+  width: 189px;
+  position: absolute;
+  top: 35px;
+  left: 0;
+}
+#header .header_nav .item_class_nav dl {
+  width: 165px;
+  padding: 16px 13px 13px 10px;
+  text-align: left;
+  background: #4593fd;
+  border-top: 1px solid #5aa1fe;
+  border-bottom: 1px solid #3487f2;
+  border-left: 1px solid transparent;
+}
+#header .header_nav .item_class_nav dl a {
+  font: 12px 'SimHei';
+}
+#header .header_nav .item_class_nav dl dt {
+  line-height: 18px;
+}
+#header .header_nav .item_class_nav dl dt .tip {
+  display: inline-block;
+  width: 48px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  background: url("../../image/img/icon_items.png") -44px 0 no-repeat;
+  position: relative;
+  top: -1px;
+  text-decoration: underline;
+}
+#header .header_nav .item_class_nav dl dt .icon {
+  width: 5px;
+  height: 8px;
+  background: url("../../image/img/icon_nav.png") -4px -27px no-repeat;
+  float: right;
+}
+#header .header_nav .item_class_nav dl dd a {
+  color: #c2d9f8;
+}
+#header .header_nav .item_class_nav .on {
+  border-left: 1px solid #4593fd;
+  background: #fff;
+}
+#header .header_nav .item_class_nav .on a {
+  color: #000000;
+}
+#header .header_nav .item_class_nav .on .tip {
+  color: #fff;
+  text-decoration: none;
+}
+#header .header_nav .item_class_nav .on .icon {
+  display: none;
+}
+#header .header_nav .item_class_show {
+  display: none;
+  z-index: 100;
+  position: absolute;
+  top: 1px;
+  left: 189px;
+  width: 531px;
+  border: 1px solid #dddddd;
+  background: #fff;
+  padding: 0 19px;
+}
+#header .header_nav .item_class_show a {
+  font: 12px 'SimHei';
+}
+#header .header_nav .item_class_show dl {
+  border-bottom: 1px solid #e5e5e5;
+  padding: 6px 0 10px 0;
+  line-height: 24px;
+}
+#header .header_nav .item_class_show dl:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+#header .header_nav .item_class_show dt {
+  float: left;
+  width: 67px;
+}
+#header .header_nav .item_class_show dt a {
+  color: #4b88da;
+  font-weight: bold;
+}
+#header .header_nav .item_class_show dd {
+  width: 459px;
+  text-align: left;
+  float: left;
+  word-break: keep-all;
+}
+#header .header_nav .item_class_show dd a {
+  color: #666;
+}
+#header .header_nav .item_class_show .item_class_btn {
+  clear: both;
+  text-align: left;
+  padding: 15px 0 14px 0;
+}
+#header .header_nav .item_class_show .item_class_btn a {
+  background: #2785e6;
+  display: inline-block;
+  height: 12px;
+  line-height: 12px;
+  padding: 8px 14px 6px 8px;
+  margin-right: 10px;
+}
+#header .header_nav .item_class_show .item_class_btn a:after {
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 8px;
+  margin-left: 8px;
+  background: url("../../image/img/icon_nav.png") -4px -37px no-repeat;
+}
+#header .header_nav .nav_list {
+  line-height: 35px;
+}
+#header .header_nav .nav_list a {
+  font-size: 14px;
+}
+#header .header_nav .nav_list li {
+  float: left;
+  width: 100px;
+  height: 35px;
+  text-align: center;
+}
+#header .header_nav .nav_list .on {
+  background: #4593fd;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>登录</title>
+  <link rel="stylesheet" href="css/include/reset.css"/>
+  <link rel="stylesheet" href="css/include/header.css"/>
+  <link rel="stylesheet" href="css/include/common.css"/>
+  <link rel="stylesheet" href="css/module/log_reg.css"/>
+  <link rel="stylesheet" href="css/include/login.css"/>
+  <link rel="stylesheet" href="css/include/footer.css"/>
+</head>
+<body>
+<!--header-->
+<header id="header">
+  <div class="header_search">
+    <div class="container">
+      <div class="logo lf">
+        <a href="index.html"></a>
+      </div>
+      <span class="login_title">欢迎登录</span>
+    </div>
+  </div>
+</header>
+<!--main-->
+<div id="main">
+  <div class="container">
+    <div class="login_wrap">
+      <form id="form_login">
+        <div class="form_group">
+          <label class="no_tip">邮箱/用户名/已验证手机</label><br/>
+          <input name="uname" class="username_inp" type="text" placeholder="gywyawei@qq.com"/>
+        </div>
+        <span class="help_txt"></span>
+        <div class="form_group">
+          <label class="no_tip">密码</label><br/>
+          <input name="upwd" class="password_inp" type="password"/>
+        </div>
+        <span class="help_err"></span>
+        <div class="other_choose">
+          <input value="0" class="auto_login" type="checkbox"/>
+          <label class="no_tip">自动登录</label>
+          <input value="0" class="safe_login" type="checkbox"/>
+          <label class="no_tip">安全控件登录</label>
+          <a href="javascript:;">忘记密码？</a>
+        </div>
+        <div class="btn">
+          <input id="bt_login" type="button" class="submit" value="登录"/>
+        </div>
+        <span class="help_txt"></span>
+      </form>
+      <div class="partner">
+        <p class="website">使用合作网站帐号登录：</p>
+        <p><a>QQ</a>|<a>网易</a><a>人人</a>|<a>奇虎360</a><a>开心</a>|<a>豆瓣</a>|<a>搜狐</a>|<a>更多<i class="icon"></i></a></p>
+      </div>
+    </div>
+    <div class="to_register">
+      <a href="register.html">免费注册&gt;&gt;</a>
+    </div>
+  </div>
+</div>
+<!--footer-->
+<footer id="footer">
+
+</footer>
+<script src="js/jquery/jquery-1.11.3.js"></script>
+<script src="js/commom/commom.js"></script>
+<script src="js/commom/login.js"></script>
+<script src="js/ajax/login.js"></script>
+</body>
+</html>
