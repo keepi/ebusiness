@@ -36,7 +36,6 @@ $('#header').load('data/header.php',function(){
 
   /**全部商品分类**/
   $('.nav_products').click(function(){
-    console.log(itemClass.css('display'))
     if( itemClass.css('display') == 'none' ){
       itemClass.css('display','block');
     }else if( itemClass.css('display') == 'block' ){
@@ -85,9 +84,6 @@ $('#header').load('data/header.php',function(){
   /**为 去购物车结算 添加单击事件 跳转到下一页面**/
   $('#header').on('click','#settle_up',function(){
 
-    console.log(loginUid);
-    console.log(loginUname);
-
     if(loginUname && loginUid ){
       document.cookie = 'LoginUserId=' + loginUid;
       document.cookie = 'LoginuserName=' + loginUname;
@@ -96,8 +92,32 @@ $('#header').load('data/header.php',function(){
       alert('请先登录');
       return
     }
+  });
+
+  /**点击搜索按钮实现跨域请求**/
+  $('#header').on('keyup','#searchInp',function(){
+    if($(this).value != '' ){
+      var oscript = document.createElement('script');
+      oscript.src = 'http://suggestion.baidu.com/su?wd='+this.value+'&cb=showItem';
+      document.body.appendChild(oscript);
+    }else{
+      $(this).parent().hide();
+    }
   })
 });
+
+function showItem(data){
+  var html = '';
+  if(data.s.length){
+    $('#search_result').show();
+    for(var i = 0 ;i<data.s.length;i++){
+      html += '<li><a target="_blank" href="http://www.baidu.com/s?wd='+data.s[i]+'">'+ data.s[i] +'</a></li>';
+    }
+    $('#search_result').html(html)
+  }else{
+    $('#search_result').hide();
+  }
+}
 
 /**加载尾部**/
 $('#footer').load('data/footer.php');

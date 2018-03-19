@@ -169,16 +169,7 @@ INSERT INTO e_product VALUES
 (70,'华为 荣耀 畅玩4X 晨曦金 移动联通电信4G手机 双卡双待 5.5英寸大屏看片利器',749.00,'image/phone/phone_34.jpg',1),
 (71,'三星 Galaxy On5（G5500）金色 移动联通4G手机 真皮质感后盖，2600毫安大容量',699.00,'image/phone/phone_35.jpg',1),
 (72,'OPPO A37 2GB+16GB内存版 玫瑰金 全网通4G手机 双卡双待 【赠品任你选】',1299.00,'image/phone/phone_36.jpg',1),
-(73,'乐视（Le）乐2（X620）32GB 原力金 移动联通电信4G手机 双卡双待 5.5英寸',988.00,'image/phone/phone_27.jpg',1),
-(74,'【美味】车厘子',12.00, 'image/food/1.jpg',2),
-(75,'【可口】香脆松子',99.00,'image/food/2.jpg',2),
-(76,'【可口】香脆松子',79.00, 'image/food/3.jpg',2),
-(77,'【新口味】减肥神器魔芋丝',9.00,'image/food/4.jpg',2),
-(78,'最新上市 精品蓝莓',24.00, 'image/food/5.jpg',2),
-(79,'最新上市 香甜脐橙',59.00,'image/food/6.jpg',2),
-(80,'【香甜】浓郁巧克力',74.00,'image/food/7.jpg',2),
-(81,'进口方便面',95.00,'image/food/8.jpg',2),
-(82,'巧克力威化饼',29.00,'image/food/9.jpg',2);
+(73,'乐视（Le）乐2（X620）32GB 原力金 移动联通电信4G手机 双卡双待 5.5英寸',988.00,'image/phone/phone_27.jpg',1);
 
 
 /**用户购物车表**/
@@ -200,3 +191,40 @@ INSERT INTO e_cart_detail VALUES
 (1,101,15,3),
 (2,101,18,1),
 (3,101,21,2);
+
+/**用户订单信息表**/
+CREATE TABLE e_order(
+  oid INT PRIMARY KEY AUTO_INCREMENT,
+  rcvName VARCHAR(32),
+  addr VARCHAR(128),
+  phone VARCHAR(20),
+  price FLOAT(12,2),
+  payment INT,          #付款方式1:银联/2:微信/3:支付宝
+  orderTime BIGINT,
+  expressment INT,      #快递方式1:圆通/2:申通/3:韵达/4:中通/5:顺丰
+  userId INT
+);
+INSERT INTO e_order VALUES
+(90239234,'艾迪','湖北省武汉市洪山区雄楚大道666号(中南财经政法大学)',15871145629,'3565.00','1','1501234567890','1','10');
+
+/**订单详情表**/
+CREATE TABLE e_order_detail(
+  did INT PRIMARY KEY AUTO_INCREMENT,
+  orderId INT,
+  productId INT,
+  count INT
+);
+INSERT INTO e_order_detail VALUES
+(981234811, 90239234, 10, 2);
+
+/**抽奖信息**/
+CREATE TABLE e_lottery(
+  lid INT PRIMARY KEY AUTO_INCREMENT,
+  userId INT,
+  lotteryTime BIGINT,
+  grade INT
+);
+INSERT INTO e_lottery VALUES
+(1,	10,	1501234567890,  2),
+(2,	10,	1511234567890,  4),
+(3,	10,	1521234567890,  4);

@@ -44,11 +44,14 @@
     <div class="paycont">
       <div class="address" style="margin-top:10px">
         <h3>确认收货地址 </h3>
+
         <div class="control">
           <div class="tc-btn createAddr theme-login am-btn am-btn-danger">使用新地址</div>
         </div>
+
         <div class="clear"></div>
-        <ul>
+
+        <ul class="clearfix">
           <li class="user-addresslist defaultAddr">
             <div class="address-left">
               <div class="user DefaultAddr">
@@ -60,9 +63,9 @@
               <div class="default-address DefaultAddr">
                 <span class="buy-line-title buy-line-title-type">收货地址：</span>
 									<span class="buy--address-detail">
-                    <span class="province">湖北</span>省
-                    <span class="city">武汉</span>市
-                    <span class="dist">洪山</span>区
+                    <span class="province">湖北省</span>
+                    <span class="city">武汉市</span>
+                    <span class="dist">洪山区</span>
                     <span class="street">雄楚大道666号(中南财经政法大学)</span>
                   </span>
               </div>
@@ -79,9 +82,8 @@
               <span class="new-addr-bar hidden">|</span>
               <a href="#">编辑</a>
               <span class="new-addr-bar">|</span>
-              <a href="javascript:void(0);" onclick="delClick(this);">删除</a>
+              <a href="javascript:void(0);">删除</a>
             </div>
-
           </li>
         </ul>
 
@@ -91,11 +93,11 @@
     <div class="logistics">
       <h3>选择物流方式</h3>
       <ul class="op_express_delivery_hot">
-        <li data-value="yuantong" class="OP_LOG_BTN  "><i class="c-gap-right" style="background-position:0px -468px"></i>圆通<span></span></li>
-        <li data-value="shentong" class="OP_LOG_BTN  "><i class="c-gap-right" style="background-position:0px -1008px"></i>申通<span></span></li>
-        <li data-value="yunda" class="OP_LOG_BTN  "><i class="c-gap-right" style="background-position:0px -576px"></i>韵达<span></span></li>
-        <li data-value="zhongtong" class="OP_LOG_BTN op_express_delivery_hot_last "><i class="c-gap-right" style="background-position:0px -324px"></i>中通<span></span></li>
-        <li data-value="shunfeng" class="OP_LOG_BTN  op_express_delivery_hot_bottom"><i class="c-gap-right" style="background-position:0px -180px"></i>顺丰<span></span></li>
+        <li data-value="1" class="OP_LOG_BTN  selected"><i class="c-gap-right" style="background-position:0px -468px"></i>圆通<span></span></li>
+        <li data-value="2" class="OP_LOG_BTN  "><i class="c-gap-right" style="background-position:0px -1008px"></i>申通<span></span></li>
+        <li data-value="3" class="OP_LOG_BTN  "><i class="c-gap-right" style="background-position:0px -576px"></i>韵达<span></span></li>
+        <li data-value="4" class="OP_LOG_BTN op_express_delivery_hot_last "><i class="c-gap-right" style="background-position:0px -324px"></i>中通<span></span></li>
+        <li data-value="5" class="OP_LOG_BTN  op_express_delivery_hot_bottom"><i class="c-gap-right" style="background-position:0px -180px"></i>顺丰<span></span></li>
       </ul>
     </div>
     <div class="clear"></div>
@@ -104,9 +106,9 @@
     <div class="logistics">
       <h3>选择支付方式</h3>
       <ul class="pay-list">
-        <li class="pay card"><img src="image/img/wangyin.jpg" />银联<span></span></li>
-        <li class="pay qq"><img src="image/img/weizhifu.jpg" />微信<span></span></li>
-        <li class="pay taobao"><img src="image/img/zhifubao.jpg" />支付宝<span></span></li>
+        <li class="pay card selected" value="1"><img src="image/img/wangyin.jpg" />银联<span></span></li>
+        <li class="pay qq" value="2"><img src="image/img/weizhifu.jpg" />微信<span></span></li>
+        <li class="pay taobao" value="3"><img src="image/img/zhifubao.jpg" />支付宝<span></span></li>
       </ul>
     </div>
     <div class="clear"></div>
@@ -119,7 +121,7 @@
           <thead class="wp">
             <tr>
               <th>
-                <input type="checkbox" id="selAll"/>
+                <input type="checkbox" id="selAll" checked/>
                 <label for="selAll" class="no_tip">全选</label>
               </th>
               <th>商品</th>
@@ -178,9 +180,9 @@
               <p class="buy-footer-address">
                 <span class="buy-line-title buy-line-title-type">寄送至：</span>
 									<span class="buy--address-detail">
-								 <span class="province">湖北</span>省
-                  <span class="city">武汉</span>市
-                  <span class="dist">洪山</span>区
+								 <span class="province">湖北省</span>
+                  <span class="city">武汉市</span>
+                  <span class="dist">洪山区</span>
                   <span class="street">雄楚大道666号(中南财经政法大学)</span>
                   </span>
                 </span>
@@ -197,7 +199,7 @@
 
           <div id="holyshit269" class="submitOrder">
             <div class="go-btn-wrap">
-              <a id="J_Go" href="success.html" class="btn-go" tabindex="0" title="点击此按钮，提交订单">提交订单</a>
+              <a id="J_Go" href="javascript:;" class="btn-go" tabindex="0" title="点击此按钮，提交订单">提交订单</a>
             </div>
           </div>
           <div class="clear"></div>
@@ -207,8 +209,57 @@
     <div class="clear"></div>
   </div>
 </div>
-
 </div>
+</div>
+
+<div class="modal_mask"></div>
+<div class="modal_containter">
+  <div class="modal_hd">
+    <h3> <span class="alert">新增地址</span> / Add address </h3>
+  </div>
+  <hr/>
+  <div class="modal_bd">
+    <form id="address">
+      <div class="input_group">
+        <label class="no_tip">收货人</label>
+        <input name="username" type="text" placeholder="收货人"/>
+      </div>
+      <div class="input_group">
+        <label class="no_tip">手机号码</label>
+        <input name="phone" type="text" placeholder="手机号必填"/>
+      </div>
+      <div class="input_group">
+        <label class="no_tip">所在地</label>
+        <select name="province">
+          <option value="0">-请选择-</option>
+          <option value="浙江省">浙江省</option>
+          <option value="湖北省">湖北省</option>
+        </select>
+        <select name="city">
+          <option value="0">-请选择-</option>
+          <option value="温州市">温州市</option>
+          <option value="武汉市">武汉市</option>
+        </select>
+        <select name="dist">
+          <option value="0">-请选择-</option>
+          <option value="瑞安区">瑞安区</option>
+          <option value="洪山区">洪山区</option>
+        </select>
+      </div>
+      <div class="input_group">
+        <label class="no_tip">详细地址</label>
+        <textarea name="address" placeholder="输入详细地址"></textarea>
+        <span class="remind">100字以内写出你的详细地址...</span>
+      </div>
+      <div class="input_group">
+        <span class="help_txt" style="margin-left: 92px"></span>
+      </div>
+    </form>
+  </div>
+  <div class="modal-ft">
+    <input type="button" class="save" id="save" value='保存'/>
+    <input type="button" class="cancel" id="cancel" value="取消"/>
+  </div>
 </div>
 <!--footer-->
 <footer id="footer">

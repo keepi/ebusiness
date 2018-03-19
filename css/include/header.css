@@ -30,6 +30,7 @@
 #header .header_search .search {
   margin-left: 185px;
   margin-top: 10px;
+  position: relative;
 }
 #header .header_search .search .search_input {
   width: 350px;
@@ -42,6 +43,22 @@
   background: #ff8c00;
   color: #fff;
   font: 14px 'Microsoft YaHei';
+}
+#search_result{
+  margin:0;
+  padding:0;
+  width: 358px;
+  position:absolute;
+  top:35px;
+  left:0;
+  border:1px solid #ddd;
+  background-color: #fff;
+  z-index: 500;
+  display: none;
+}
+#search_result li{
+  line-height:30px;
+  padding: 0 5px ;
 }
 #header .header_search .cart {
   margin-right: 59px;

@@ -40,15 +40,17 @@ if($row!==null){
 }else{
 	// 5.如果未购买过则添加购物记录 数量为1
 	$sql = "INSERT INTO e_cart_detail VALUES(NULL,$cid,$pid,1)";
+	$count = 1;
 	mysqli_query($conn,$sql);
 	$did = mysqli_insert_id($conn);
-}
+};
 
 $output = [
 	'code' => 1,
 	'did' => $did,
 	'count' =>$count
 ];
+
 echo json_encode($output);
 
 

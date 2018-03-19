@@ -2,6 +2,7 @@ input[type=text],
 input[type=password] {
   width: 264px;
   height: 28px;
+  background-color: #fff;
 }
 label {
   width: 87px;
@@ -10,6 +11,17 @@ label {
 label,
 input {
   float: left;
+}
+.container{
+  position: relative;
+  overflow: hidden;
+}
+video{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: -1;
 }
 .form_group {
   margin-bottom: 30px;
@@ -24,6 +36,7 @@ input {
   border: 1px solid #e8e8e8;
   margin: 10px auto;
   padding: 66px 150px 55px 103px;
+  background-color: rgba(255,255,255,.8);
 }
 .other_choose {
   margin: 55px 0 34px 100px;

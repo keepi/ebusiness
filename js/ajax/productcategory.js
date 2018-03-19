@@ -6,7 +6,6 @@ function getProduct(objContent){
     url:"data/10_productcategory.php",
     data:{group:$(objContent).attr('group')},
     success:function(list){
-      console.log(list);
       var html = '';
       $.each(list,function(i,p){
         if( i < 8)

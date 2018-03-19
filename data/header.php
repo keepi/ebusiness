@@ -20,7 +20,9 @@
       <a href="index.html"></a>
     </div>
     <div class="search lf">
-      <input type="text" class="search_input lf"/>
+      <input type="text" class="search_input lf" id='searchInp'/>
+      <ul id='search_result'>
+      </ul>
       <input type="button" class="search_btn lf" value="搜 索"/>
     </div>
     <div class="cart rt">
@@ -645,7 +647,7 @@
     <ul class="nav_list lf">
       <li class="on"><a href="filterpage.html">数码城</a></li>
       <li><a href="productcategory.html">天黑黑</a></li>
-      <li><a href="javascript:;">团购</a></li>
+      <li><a href="fooditems.html">美味食品</a></li>
       <li><a href="javascript:;">发现</a></li>
       <li><a href="javascript:;">二手特卖</a></li>
       <li><a href="javascript:;">名品会</a></li>

@@ -1,43 +1,52 @@
+
+
 /**1:页面加载完后，异步请求页头和页尾**/
 
 /**2:异步请求商品列表**/
 var currPage = 1; //当前页
-var recordCount,pageSize,pageCount; // 总数 每页显示数 总页数
+var recordCount,pageSize,pageCount,star,count; // 总数 每页显示数 总页数 起始页 数量
 
 loadProductByPage(1);
+
 function loadProductByPage(page){
   $.ajax({
     type:'GET',
-    url:'data/5_product_filterpage.php',
-    data:{pageNum:page},
+    url:'data/17_food_items.php',
+    dataType:'json',
     success:function(list){
 
-      recordCount = list.recordCount; // 总数
-      pageSize = list.pageSize; // 每页显示条数
-      pageCount = list.pageCount; // 总页数
-      currPage = list.pageNum ;// 当前页
+      recordCount =list.data.length; // 总数
+      pageSize = 15; // 每页显示条数
+      pageCount = Math.ceil(recordCount / pageSize); // 总页数
+      currPage = page ;// 当前页
+      star = (currPage-1) * pageSize;
+      count = pageSize;
 
       // 遍历数据中的产品内容 生产列表
-      $('.total_goods').html(recordCount);
+      //$('.total_goods').html(pageSize);
 
       var html = '';
       $.each(list.data,function(i,p){
+
+        // 获得图片组中指定位置的图片
+        var num = p.imageUrls[p.imageUrls.length-2];
+
         html += `
           <dl>
             <dt class="pro_img">
-              <a href="show_product_detail.php?pid=${p.pid}"><img src="${p.pic}" alt=""/></a>
+              <a href="show_food_detail.php?pid=${p.id}"><img src="${num}" alt=""/></a>
               <i class="icon"></i>
             </dt>
             <dd class="info">
-              <a href="javascript:;">${p.pname}</a>
+              <a href="javascript:;">${p.title}</a>
             </dd>
             <dd class="info_price">
-              <span class="price">￥${p.price}</span>&nbsp;
+              <span class="price">￥${p.marketPrice}</span>&nbsp;
                 <span class="comment">
                   <a href="javascript:;">4886</a>评论
                 </span>
             </dd>
-            <a class="add_cart" href="${p.pid}">
+            <a class="add_cart" href="${p.id}">
               <i class="cart_icon"></i>
               加入购物车
             </a>
@@ -54,6 +63,7 @@ function loadProductByPage(page){
     }
   })
 }
+
 
 /**3:实现分页**/
 $('#pager').on('click','span a',function(){
@@ -100,7 +110,6 @@ $('.choose_list').on('click','a.add_cart',function(e){
       url:'data/9_cart_product_add.php',
       data:{uid:loginUid,pid:pid},
       success:function(result){
-        console.log(result)
         if( result.code === 1 ){
           alert('商品已成功添加到购物车！该商品已购买的数量:'+result.count);
         }else{
@@ -113,6 +122,21 @@ $('.choose_list').on('click','a.add_cart',function(e){
     location.href = 'login.html';
   }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

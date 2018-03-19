@@ -32,8 +32,8 @@ $.ajax({
       html += `
         <tr>
           <td>
-            <input type="checkbox"/>
-            <input type="hidden" value="${p.did}" />
+            <input type="checkbox" checked/>
+            <input type="hidden" value="${p.pid}" />
             <div><img src="${p.pic}"" alt=""/></div>
           </td>
           <td><a href="javarscript:;">${p.pname}</a></td>
@@ -92,8 +92,7 @@ $.ajax({
     addBtn.each(function(index){
       $(this).on('click',function(){
         $(this).prev().val(parseInt($(this).prev().val()) + 1);
-        console.log( ( price.eq(index).html()));
-        subTotal.eq(index).html( (parseFloat(price.eq(index).html()) * parseFloat(count.eq(index).val())).toFixed(2) )
+        subTotal.eq(index).html( ( parseFloat(price.eq(index).html()) * parseFloat(count.eq(index).val())).toFixed(2) );
         getTotal();
       })
     });
@@ -101,7 +100,7 @@ $.ajax({
       $(this).on('click',function(){
         if( $(this).next().val() > 1){
           $(this).next().val(parseInt($(this).next().val()) - 1);
-          subTotal.eq(index).html( ( parseFloat(price.eq(index).html()) * parseFloat(count.eq(index).val())).toFixed(2) )
+          subTotal.eq(index).html( ( parseFloat(price.eq(index).html()) * parseFloat(count.eq(index).val())).toFixed(2) );
           getTotal();
         }
       })
@@ -124,6 +123,37 @@ $.ajax({
       $('#ActualFee').html(total.toFixed(2))
     }
     getTotal();
+
+    /**3:点击提交按钮获取信息**/
+    $('#J_Go').click(function(){
+      // 获得 用户订单信息表 和 订单详情表 所需要的所有
+      var productInfo = [];
+      order['userId'] = loginUid;
+      order['price'] = $('#ActualFee').html();
+      for(var i = 0 ; i < singleLen ; i++ ){
+        productInfo[i] = {'pid':checkboxSingle.eq(i).next().val(),'count':count.eq(i).val()}
+      }
+      order['productInfo'] = productInfo;
+      sessionStorage['orderList'] = order;
+      console.log(order);
+      // 将数据发送给后台
+      $.ajax({
+        type:'POST',
+        url:'data/12_order.php',
+        data:order,
+        success:function(list){
+          if(list.code==1){
+            sessionStorage['orderId'] = list.orderId;
+            location.href = 'success.html'
+          }else{
+            alert('下单失败'+list.msg);
+          }
+        },
+        error:function(){
+          console.log(arguments);
+        }
+      })
+    })
   },
   error:function(){
     console.log(arguments)
